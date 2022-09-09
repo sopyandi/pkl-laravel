@@ -14,8 +14,15 @@ use App\Http\Controllers\RianController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/',[RianController::class, 'home']);
+Route::get('/category',[RianController::class, 'category']);
+Route::get('/user',[RianController::class,'user']);
+Route::get('/blog',[RianController::class, 'blog']);
 Route::get('/login',[RianController::class,'login']);
+//singgle route
+//short by route
+Route::get('/shortby_category/{slug:slug}',[RianController::class, 'shortby_category']);
+
