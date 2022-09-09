@@ -31,6 +31,7 @@ class RianController extends Controller
     {
         return view('/user',[
         'title' => 'Halaman Data User',
+        'no'=>1,
         'models'=>User::all()
         ]);
     }
